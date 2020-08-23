@@ -1,0 +1,24 @@
+@model Product
+
+<div class="card mb-3 mt-3">
+          <div class="card-body">
+    <div class="row no-gutter">
+        <div class="col-md-3">
+            <img src="~/img/@Model.ImageUrl" class="card-img" alt="">
+        </div>
+        <div class="col-md-9">
+                <h5 class="car-title">@Model.Name</h5>
+                <p class="card-text">@Model.Author</p>
+                <h6 class="card-text">@Model.Pages</h6>
+                <a href="#" class="btn btn-link p-0 mb-3">Roman Bilim</a> <hr>
+                @* <p class="card-text">@Model.Description</p> *@
+            <a asp-controller="Book" asp-action="Read" asp-route-id="@Model.ProductId" class="btn btn-primary btn-sm">İncele</a> @*book details altındaki product bilgisine gidiyo giderkende productid gönderiyo biz id bilgisini alıyoruz ve o id bilgisine uyan kaydı book comtroller içerisinde kullanıcılara göstericez*@  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="p-3">@Model.Description</p> Burada Özet kısmı olcak
+        </div>
+    </div>
+</div>  
+   </div>
